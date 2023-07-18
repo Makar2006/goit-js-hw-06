@@ -1,0 +1,17 @@
+/* *
+  |============================
+  | TASK 3
+  |============================
+* */
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  margin-top: 150px;
+  list-style: none;
+}
+.image {
+  padding: 2px;
+  border: darkmagenta dashed 4px;
+}
