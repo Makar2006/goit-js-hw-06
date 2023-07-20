@@ -5,24 +5,21 @@
 // */
 
 const formEl = document.querySelector('.login-form');
-const btnEl = document.querySelector('[type="submit"]');
 
 formEl.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
   e.preventDefault();
-
-  if (
-    formEl.elements.email.value === '' ||
-    formEl.elements.password.value === ''
-  ) {
+  const emailIn = e.target.elements.email.value.trim();
+  const passwordIn = e.target.elements.password.value.trim();
+  if (emailIn === '' || passwordIn === '') {
     alert('Всі поля повинні бути заповнені!');
   } else {
     const infoUser = {
-      email: formEl.elements.email.value,
-      password: formEl.elements.password.value,
+      email: emailIn,
+      password: passwordIn,
     };
     console.log(infoUser);
+    formEl.reset();
   }
-  formEl.reset();
 }

@@ -12,5 +12,5 @@ inputEl.addEventListener('input', inputfun);
 
 function inputfun() {
   const textEl = inputEl.value;
-  spanEl.textContent = inputEl.value || 'Anonymous';
+  spanEl.textContent = inputEl.value.trim() || 'Anonymous';
 }

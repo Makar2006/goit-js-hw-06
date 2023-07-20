@@ -11,10 +11,17 @@ inputEl.addEventListener('blur', onBlur);
 function onBlur(e) {
   const inputLength = e.target.value.length;
   if (Number(inputLength) === Number(inputEl.dataset.length)) {
-    inputEl.classList.add('valid');
-    inputEl.classList.remove('invalid');
+    increasing();
   } else {
-    inputEl.classList.add('invalid');
-    inputEl.classList.remove('valid');
+    decreasing();
   }
+}
+
+function increasing() {
+  inputEl.classList.add('valid');
+  inputEl.classList.remove('invalid');
+}
+function decreasing() {
+  inputEl.classList.add('invalid');
+  inputEl.classList.remove('valid');
 }

@@ -9,15 +9,15 @@ const btnInc = document.querySelector('[data-action="increment"]');
 const valueEl = document.getElementById('value');
 let counterValue = 0;
 
-btnDec.addEventListener('click', OnclickDec);
-btnInc.addEventListener('click', OnclickInc);
+btnDec.addEventListener('click', onclickDec);
+btnInc.addEventListener('click', onclickInc);
 
-function OnclickDec() {
+function onclickDec() {
   counterValue -= 1;
   valueEl.textContent = counterValue;
 }
 
-function OnclickInc() {
+function onclickInc() {
   counterValue += 1;
   valueEl.textContent = counterValue;
 }
